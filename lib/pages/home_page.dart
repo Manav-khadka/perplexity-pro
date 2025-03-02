@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:perplexity_pro/services/chat_web_service.dart';
 import 'package:perplexity_pro/theme/colors.dart';
 import 'package:perplexity_pro/widgets/search_section.dart';
 import 'package:perplexity_pro/widgets/side_bar.dart';
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    // ChatWebService().connect();
+    ChatWebService().connect();
   }
 
   @override
