@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:perplexity_pro/pages/chat_page.dart';
+import 'package:perplexity_pro/services/chat_web_service.dart';
 import 'package:perplexity_pro/theme/colors.dart';
 import 'package:perplexity_pro/widgets/search_bar_button.dart';
 
@@ -79,13 +81,13 @@ class _SearchSectionState extends State<SearchSection> {
                     GestureDetector(
                       onTap: () {
                         print("Search button pressed");
-                        // ChatWebService().chat(queryController.text.trim());
-                        // Navigator.of(context).push(
-                        //   MaterialPageRoute(
-                        //     builder: (context) =>
-                        //         ChatPage(question: queryController.text.trim()),
-                        //   ),
-                        // );
+                        ChatWebService().chat(queryController.text.trim());
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ChatPage(question: queryController.text.trim()),
+                          ),
+                        );
                       },
                       child: Container(
                         padding: EdgeInsets.all(9),
